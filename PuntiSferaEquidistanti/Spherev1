@@ -1,0 +1,15 @@
+import random
+random.seed()
+k=10**10
+#cord =[[1,2,3]]*k
+
+#while success==false
+
+for i in range(k):
+    x = random.random()
+    y = random.random()
+    z = random.random()
+    if(x**2+y**2+z**2==1):
+        print('success')
+
+    print(i)
