@@ -17,7 +17,7 @@ int main(){
   double energie1[N2]={0},energie2[10000]={0};;
   int i,i1,i2,i3,i4,i5,i6,i7,i8,i9,i10,i11,i12,iconf,j=0;
   FILE* fp;
-
+  srand(time(NULL));
   //Blocco generazione 4096 configurazioni ed energie
   for(i1=1;i1<=2;i1++){
     for(i2=1;i2<=2;i2++){
@@ -101,7 +101,7 @@ int main(){
       for (i1=0;i1<N;i1++){
         printf("|%2i",conf[i1]);
       }
-      printf("| eps: %lf\n",energie2[j]);
+      printf("| eps: %lf\n",energie2[i]);
       j++;
     }
   }
@@ -114,6 +114,21 @@ int main(){
       }
     }
   }
+
+  for(i=0;i<N2;i++){
+    for(j=0;j<2*N+1;j++){
+      if(controllo[j]==energie2[i]){
+        frequenza[j]++;
+
+      }
+    }
+  }
+
+  fp= fopen("histo2.dat","w+");
+  for(j=0;j<2*N+1;j++){
+    fprintf(fp,"%i %i\n",controllo[j],frequenza[j]);
+  }
+  fclose(fp);
 
 
 }
