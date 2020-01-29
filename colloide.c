@@ -4,7 +4,7 @@
 #include <math.h>
 
 #define N 1000
-#define DX 8
+#define DX 1
 
 void RandomPath(int r2[]);
 void PrintResults(double av_r2[]);
