@@ -4,7 +4,7 @@
 #include <math.h>
 
 #define N 1000
-#define DX 1
+#define DX 8
 
 void RandomPath(int r2[]);
 void PrintResults(double av_r2[]);
@@ -41,7 +41,7 @@ void RandomPath(int r2[]){
     }else{
       x+=DX;
     }
-    r2[i]=i*pow(x,2);
+    r2[i]=i*pow(DX,2);
   }
 }
 
