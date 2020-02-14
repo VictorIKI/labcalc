@@ -142,7 +142,7 @@ double epsilon(int conf[]){
     }
     else{eps+=conf[i]*conf[i+1];}
   }
-  //eps*=(double)-1/N;
+  //eps*= -(double)1/N;
   return eps;
 }
 
