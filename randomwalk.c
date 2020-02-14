@@ -3,7 +3,7 @@
 #include <time.h>
 #include <math.h>
 
-#define MAX 20000
+#define MAX 200000
 
 void move(int pos[]);
 double analysis(int trajectory[][MAX],int posmax[], int N);
@@ -15,7 +15,7 @@ int main (){
   do{
     printf("Inserire un valore tra 1000 e 10000\n" );
     scanf("%i",&N);
-  }while (N<1000||N>10000);
+  }while (N<1000||N>100000);
 
   for(t=0;t<N;t++){
     trajectory[0][t]=pos[0];
